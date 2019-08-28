@@ -2,8 +2,8 @@
 
 ## Usage
 There are 2 different ways to use it:
-1. Extend `DWSurface` and specify `_contentTemplate()`.
-2. Use `dw-surface` in local dom of any other element & provide it's content as light dom (`slot`).
+1. Extend `DWSurface` and specify `_contentTemplate()`. (Most used case)
+2. Use `dw-surface` in local dom of any other element & provide it's content as light dom (`slot`). (Rare used case)
 
 ## properties
 - `bg`. In which color background should be rendered. 
@@ -23,5 +23,9 @@ properties.
 - `--dw-surface-overlay-opacitiy-elevation-12`
 - `--dw-surface-overlay-opacitiy-elevation-16`
 - `--dw-surface-overlay-opacitiy-elevation-24`
+
+> It's already been declrared with default values of material style in 
+> [`material-styles`](https://github.com/DreamworldSolutions/material-styles). 
+> So, In most cases you don't need to customize them unless you really intended to do so.
 
 
