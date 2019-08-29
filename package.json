@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/DreamworldSolutions/dw-surface#readme",
   "dependencies": {
-    "@dw/material-styles": "^1.0.3-SNAPSHOT",
+    "@dw/material-styles": "^1.0.4-SNAPSHOT",
     "lit-element": "^2.2.1"
   },
   "devDependencies": {
