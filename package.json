@@ -1,0 +1,31 @@
+{
+  "name": "@dw/dw-surface",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DreamworldSolutions/dw-surface.git"
+  },
+  "keywords": [
+    "lit",
+    "checkbox"
+  ],
+  "author": "Ruchita kheni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DreamworldSolutions/dw-surface/issues"
+  },
+  "homepage": "https://github.com/DreamworldSolutions/dw-surface#readme",
+  "dependencies": {
+    "@dw/material-styles": "^1.0.3-SNAPSHOT",
+    "lit-element": "^2.2.1"
+  },
+  "devDependencies": {
+    "@material/mwc-switch": "^0.7.1",
+    "@material/mwc-formfield": "^0.7.1"
+  }
+}
