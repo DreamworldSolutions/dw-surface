@@ -1,6 +1,6 @@
 {
-  "name": "@dw/dw-surface",
-  "version": "1.0.0-SNAPSHOT",
+  "name": "@dreamworld/dw-surface",
+  "version": "0.0.0-development",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,11 @@
     "lit-element": "^2.2.1"
   },
   "devDependencies": {
+    "semantic-release": "beta",
     "@material/mwc-switch": "^0.7.1",
     "@material/mwc-formfield": "^0.7.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
