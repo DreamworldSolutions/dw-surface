@@ -9,7 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 import { LitElement, html, css } from 'lit-element';
-import { Shadow } from '@dw/material-styles/shadow';
+import { Shadow } from '@dreamworld/material-styles/shadow';
 
 export class DwSurface extends LitElement {
   static get styles() {
