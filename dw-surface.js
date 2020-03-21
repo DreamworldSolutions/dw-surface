@@ -137,6 +137,8 @@ export class DwSurface extends LitElement {
           right: 0;
           bottom:0;
         }
+
+        ::slotted(*) { z-index: 1; }
       `
     ];
   }
