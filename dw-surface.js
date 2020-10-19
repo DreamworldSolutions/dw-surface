@@ -139,6 +139,10 @@ export class DwSurface extends LitElement {
           bottom:0;
         }
 
+        .scroller{
+          overflow: auto;
+        }
+
         ::slotted(*) { z-index: 1; }
       `
     ];
@@ -171,7 +175,9 @@ export class DwSurface extends LitElement {
     return html`
       <div class="overlay fit"></div>
       <!-- <div class="fit"> -->
-        ${this._getContentTemplate}
+        <section class="scroller">
+          ${this._getContentTemplate}
+        </section>
       <!-- </div> -->
     `;
   }
