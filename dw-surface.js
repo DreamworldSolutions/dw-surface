@@ -129,6 +129,7 @@ export class DwSurface extends LitElement {
         .overlay{
           background-color: var(--dw-surface-overlay-color);
           opacity: 0;
+          pointer-events: none;
         }
 
         .fit{
