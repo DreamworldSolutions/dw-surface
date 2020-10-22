@@ -129,6 +129,7 @@ export class DwSurface extends LitElement {
         .overlay{
           background-color: var(--dw-surface-overlay-color);
           opacity: 0;
+          pointer-events: none;
         }
 
         .fit{
@@ -137,6 +138,10 @@ export class DwSurface extends LitElement {
           left: 0;
           right: 0;
           bottom:0;
+        }
+
+        .scroller{
+          overflow: auto;
         }
 
         ::slotted(*) { z-index: 1; }
@@ -171,7 +176,9 @@ export class DwSurface extends LitElement {
     return html`
       <div class="overlay fit"></div>
       <!-- <div class="fit"> -->
-        ${this._getContentTemplate}
+        <section class="scroller">
+          ${this._getContentTemplate}
+        </section>
       <!-- </div> -->
     `;
   }
