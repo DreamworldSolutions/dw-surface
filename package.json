@@ -28,7 +28,7 @@
   "devDependencies": {
     "@material/mwc-formfield": "^0.7.1",
     "@material/mwc-switch": "^0.7.1",
-    "semantic-release": "17.0.8"
+    "semantic-release": "17.2.3"
   },
   "publishConfig": {
     "access": "public"
