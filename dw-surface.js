@@ -141,6 +141,7 @@ export class DwSurface extends LitElement {
         }
 
         .scroller{
+          display: inherit;
           overflow: auto;
         }
 
