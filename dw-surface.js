@@ -8,13 +8,11 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { html, css } from 'lit-element';
-import { LitElement } from '@dreamworld/pwa-helpers/lit-element.js';
+import { LitElement, html, css } from 'lit';
 import { Shadow } from '@dreamworld/material-styles/shadow';
 
 export class DwSurface extends LitElement {
-  static get styles() {
-    return [
+  static styles = [ 
       Shadow,
       css`
         :host {
@@ -150,10 +148,8 @@ export class DwSurface extends LitElement {
         ::slotted(*) { z-index: 1; }
       `
     ];
-  }
 
-  static get properties() {
-    return {
+    static properties = {
       
       /**
        * Specifies the background color
@@ -173,7 +169,6 @@ export class DwSurface extends LitElement {
         reflect: true
       }
     };
-  }
 
   render() {
     return html`

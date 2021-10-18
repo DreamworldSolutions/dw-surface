@@ -8,16 +8,14 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { html, css} from 'lit-element';
-import { LitElement } from '@dreamworld/pwa-helpers/lit-element.js';
+import { LitElement, html, css} from 'lit';
 import '../dw-surface.js';
 import { ThemeStyle } from '@dreamworld/material-styles/theme';
 import '@material/mwc-switch';
 import '@material/mwc-formfield';
 
 class DwSurfaceDemo extends LitElement {
-  static get styles() {
-    return [
+  static styles = [
       ThemeStyle,
       css`
         :host{
@@ -77,7 +75,6 @@ class DwSurfaceDemo extends LitElement {
         }
       `
     ];
-  }
 
   render() {
     
