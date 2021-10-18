@@ -4,7 +4,8 @@
   "description": "",
   "main": "dw-surface.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "web-dev-server"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
   "devDependencies": {
     "@material/mwc-formfield": "^0.7.1",
     "@material/mwc-switch": "^0.7.1",
-    "semantic-release": "17.0.8"
+    "semantic-release": "17.0.8",
+    "@web/dev-server": "^0.1.18"
   },
   "publishConfig": {
     "access": "public"
