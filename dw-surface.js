@@ -148,6 +148,10 @@ export class DwSurface extends LitElement {
         }
 
         ::slotted(*) { z-index: 1; }
+
+        :host([elevation="0"][transparent]) {
+          background-color: transparent;
+        }
       `
     ];
   }
@@ -170,6 +174,15 @@ export class DwSurface extends LitElement {
        */
       elevation: {
         type: Number,
+        reflect: true
+      },
+
+      /**
+       * When true and elevation is 0, background is transparent.
+       * Default value false.
+       */
+      transparent: {
+        type: Boolean,
         reflect: true
       }
     };
