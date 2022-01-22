@@ -46,43 +46,43 @@ export class DwSurface extends LitElement {
 
 
         /* STARTS: elevation styles based on elevation */
-        :host([elevation="0"]:not([noBoxShadow])){
+        :host([elevation="0"]:not([no-box-shadow])){
           box-shadow: var(--mdc-elevation--z0);
         }
 
-        :host([elevation="1"]:not([noBoxShadow])){
+        :host([elevation="1"]:not([no-box-shadow])){
           box-shadow: var(--mdc-elevation--z1);
         }
 
-        :host([elevation="2"]:not([noBoxShadow])){
+        :host([elevation="2"]:not([no-box-shadow])){
           box-shadow: var(--mdc-elevation--z2);
         }
 
-        :host([elevation="3"]:not([noBoxShadow])){
+        :host([elevation="3"]:not([no-box-shadow])){
           box-shadow: var(--mdc-elevation--z3);
         }
 
-        :host([elevation="4"]:not([noBoxShadow])){
+        :host([elevation="4"]:not([no-box-shadow])){
           box-shadow: var(--mdc-elevation--z4);
         }
 
-        :host([elevation="6"]:not([noBoxShadow])){
+        :host([elevation="6"]:not([no-box-shadow])){
           box-shadow: var(--mdc-elevation--z6);
         }
 
-        :host([elevation="8"]:not([noBoxShadow])){
+        :host([elevation="8"]:not([no-box-shadow])){
           box-shadow: var(--mdc-elevation--z8);
         }
 
-        :host([elevation="12"]:not([noBoxShadow])){
+        :host([elevation="12"]:not([no-box-shadow])){
           box-shadow: var(--mdc-elevation--z12);
         }
 
-        :host([elevation="16"]:not([noBoxShadow])){
+        :host([elevation="16"]:not([no-box-shadow])){
           box-shadow: var(--mdc-elevation--z16);
         }
 
-        :host([elevation="24"]:not([noBoxShadow])){
+        :host([elevation="24"]:not([no-box-shadow])){
           box-shadow: var(--mdc-elevation--z24);
         }
         /* ENDS: elevation styles based on elevation */
@@ -170,11 +170,6 @@ export class DwSurface extends LitElement {
        */
       elevation: {
         type: Number,
-        reflect: true
-      },
-
-      noBoxShadow: {
-        type: Boolean,
         reflect: true
       }
     };
