@@ -75,6 +75,10 @@ class DwSurfaceDemo extends LitElement {
         .bg-surface{
           color: var(--mdc-theme-on-surface);
         }
+
+        .blue {
+          background-color: blue;
+        }
       `
     ];
   }
@@ -266,6 +270,15 @@ class DwSurfaceDemo extends LitElement {
         </dw-surface>
       </div>
 
+      <div class="layout wrapper bg-surface blue">
+        <dw-surface elevation=0 transparent>
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 transparent>
+          <div class="square">1dp</div>
+        </dw-surface>
+      </div>
     `;
   }
 
