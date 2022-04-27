@@ -79,6 +79,10 @@ class DwSurfaceDemo extends LitElement {
         .blue {
           background-color: blue;
         }
+
+        div {
+          padding: 12px 8px;
+        }
       `
     ];
   }
@@ -277,6 +281,49 @@ class DwSurfaceDemo extends LitElement {
 
         <dw-surface elevation=1 transparent>
           <div class="square">1dp</div>
+        </dw-surface>
+      </div>
+
+      <div class="layout wrapper bg-surface">
+        <div>Without box-shadow </div>
+        <dw-surface elevation=0 no-box-shadow>
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 no-box-shadow>
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 no-box-shadow>
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 no-box-shadow>
+          <div class="square">3dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=4 no-box-shadow>
+          <div class="square">4dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=6 no-box-shadow>
+          <div class="square">6dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=8 no-box-shadow>
+          <div class="square">8dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=12 no-box-shadow>
+          <div class="square">12dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=16 no-box-shadow>
+          <div class="square">16dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=24 no-box-shadow>
+          <div class="square">24dp</div>
         </dw-surface>
       </div>
     `;
