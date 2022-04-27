@@ -26,5 +26,5 @@ properties.
 
 > It's already been declrared with default values of material style in 
 > [`material-styles`](https://github.com/DreamworldSolutions/material-styles). 
-> So, In most cases you don't need to customize them unless you really intended to do so.
+> So, In most cases you don't need to customize them unless you really intended to do so. 
 
