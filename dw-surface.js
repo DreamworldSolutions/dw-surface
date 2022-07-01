@@ -23,6 +23,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 import { html, css } from 'lit-element';
 import { LitElement } from '@dreamworld/pwa-helpers/lit-element.js';
 import { Shadow } from '@dreamworld/material-styles/shadow';
+import { interactiveStyle } from './interactive-Style.js';
+import '@dreamworld/dw-ripple';
 
 export class DwSurface extends LitElement {
   static get styles() {
@@ -237,7 +239,6 @@ export class DwSurface extends LitElement {
       },
       
       /**
-       * Input property
        * Set true to show surface in activated statred.
        */
       activated: {
@@ -249,6 +250,7 @@ export class DwSurface extends LitElement {
 
   render() {
     return html`
+      ${this.interactive ? html`<dw-ripple></dw-ripple>` : html``}
       <div class="overlay fit"></div>
       <!-- <div class="fit"> -->
         <section class="scroller">

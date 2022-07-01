@@ -107,11 +107,11 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">0dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1>
+        <dw-surface elevation=1 interactive title="1dp" tabindex=0 >
           <div class="square">1dp</div>
         </dw-surface>
 
-        <dw-surface elevation=2>
+        <dw-surface elevation=1 interactive>
           <div class="square">2dp</div>
         </dw-surface>
 
@@ -150,7 +150,7 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">0dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1 bg="primary">
+        <dw-surface elevation=1 bg="primary" interactive title="1dp" tabindex=0>
           <div class="square">1dp</div>
         </dw-surface>
 
@@ -194,7 +194,7 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">0dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1 bg="secondary">
+        <dw-surface elevation=1 bg="secondary" interactive title="1dp" tabindex=0>
           <div class="square">1dp</div>
         </dw-surface>
 
@@ -237,7 +237,7 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">0dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1 bg="error">
+        <dw-surface elevation=1 bg="error" interactive title="1dp" tabindex=0>
           <div class="square">1dp</div>
         </dw-surface>
 
@@ -279,7 +279,7 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">0dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1 transparent>
+        <dw-surface elevation=1 transparent interactive title="1dp" tabindex=0>
           <div class="square">1dp</div>
         </dw-surface>
       </div>
@@ -290,7 +290,7 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">0dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1 no-box-shadow>
+        <dw-surface elevation=1 no-box-shadow interactive title="1dp" tabindex=0>
           <div class="square">1dp</div>
         </dw-surface>
 
