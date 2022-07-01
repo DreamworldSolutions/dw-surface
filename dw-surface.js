@@ -8,6 +8,18 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
+/**
+ * ## Behavior
+ *  - When hover, focus, and ripple are to be enabled, set interactive=true.
+ *  - When disabled=true, hover, focus, and ripple effects are disabled, though interactive is true.
+ *  - When selected = true, a selected overlay is shown in primary color.
+ *  - When activated=true, an activated overlay is shown in the primary color.
+ * 
+ * ## Implementation note
+ *  - The opacity of various overlays will be different based on whether the surface is rendered in primary color or not.
+ *  - The hover effect is visible even when focused or selected.
+ */
+
 import { html, css } from 'lit-element';
 import { LitElement } from '@dreamworld/pwa-helpers/lit-element.js';
 import { Shadow } from '@dreamworld/material-styles/shadow';
@@ -16,6 +28,7 @@ export class DwSurface extends LitElement {
   static get styles() {
     return [
       Shadow,
+      interactiveStyle,
       css`
         :host {
           display: block;
@@ -184,7 +197,53 @@ export class DwSurface extends LitElement {
       transparent: {
         type: Boolean,
         reflect: true
-      }
+      },
+
+      /**
+       * Input property.
+       * Set true to enabled hover, focus and ripple effect.
+       */
+      interactive: {
+        type: Boolean,
+        reflect: true
+      },
+
+      /**
+       * Input property.
+       * Set to true to disable surface.
+       */
+      disabled: {
+        type: Boolean,
+        reflect: true
+      },
+
+      /**
+       * Input property
+       * Set to true to show surface selected.
+       */
+      selected: {
+        type: Boolean,
+        reflect: true
+      },
+
+      /**
+       * Input property
+       * Set true to disable just hover effect. 
+       * Needed on a touch enabled device.
+       */
+      disableHover: {
+        type: Boolean,
+        reflect: true
+      },
+      
+      /**
+       * Input property
+       * Set true to show surface in activated statred.
+       */
+      activated: {
+        type: Boolean,
+        reflect: true
+      },
     };
   }
 
