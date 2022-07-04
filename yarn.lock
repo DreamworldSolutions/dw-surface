@@ -31,12 +31,11 @@
     "@material/mwc-ripple" "^0.26.1"
     lit-element "^2.2.0"
 
-"@dreamworld/material-styles@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@dreamworld/material-styles/-/material-styles-1.1.0.tgz#f6053b6a86d122c753140b0401d17214d19adfda"
-  integrity sha512-UaW/VOE6VP/ZXaZnz+VsWp0voLLr3kAJbAPesJ1ROAt8zuJHiPwj5yID1nKBnlb/yb7dPrbHizd8JAjgHc8XPw==
+"@dreamworld/material-styles@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@dreamworld/material-styles/-/material-styles-2.2.0.tgz#45d232cdd1b9b063a447d96316c9f9f08a16f5c4"
+  integrity sha512-26ZnFaTZD0NdehrSuzJ7J1PLGv+Mo/rNVGegwIAlT49c3/c3rLJ6DbRfaTLAu4cKO2JWwkcZ01unywQet1QiOQ==
   dependencies:
-    "@polymer/font-roboto" "^3.0.2"
     lit-element "^2.2.0"
 
 "@dreamworld/pwa-helpers@^1.7.1":
@@ -388,11 +387,6 @@
   integrity sha512-UZ1pErDue6bZNjYOotCNveTXArOMZQFG6hKJfOnGnulVCMcVVi7YIIuuR4WfBhjo7zgpmzn/BkPDnUXtNx+PcQ==
   dependencies:
     "@types/node" ">= 8"
-
-"@polymer/font-roboto@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@polymer/font-roboto/-/font-roboto-3.0.2.tgz#80cdaa7225db2359130dfb2c6d9a3be1820020c3"
-  integrity sha512-tx5TauYSmzsIvmSqepUPDYbs4/Ejz2XbZ1IkD7JEGqkdNUJlh+9KU85G56Tfdk/xjEZ8zorFfN09OSwiMrIQWA==
 
 "@semantic-release/commit-analyzer@^8.0.0":
   version "8.0.1"

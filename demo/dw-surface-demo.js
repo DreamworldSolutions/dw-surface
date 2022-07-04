@@ -22,6 +22,7 @@ class DwSurfaceDemo extends LitElement {
       css`
         :host{
           display: inline-block;
+          background: var(--mdc-theme-surface);
         }
 
         .layout{
@@ -57,7 +58,7 @@ class DwSurfaceDemo extends LitElement {
         mwc-formfield{
           display: block;
           padding-bottom: 24px;
-          background: #fff;
+          background: var(--mdc-theme-surface);
         }
 
         .bg-error{
@@ -107,23 +108,23 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">0dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1 interactive title="1dp" tabindex=0 >
+        <dw-surface elevation=1 interactive>
           <div class="square">1dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1 interactive>
+        <dw-surface elevation=1 interactive disabled>
           <div class="square">2dp</div>
         </dw-surface>
 
-        <dw-surface elevation=3>
+        <dw-surface elevation=3 activated>
           <div class="square">3dp</div>
         </dw-surface>
 
-        <dw-surface elevation=4>
+        <dw-surface elevation=4 selected title="4dp">
           <div class="square">4dp</div>
         </dw-surface>
 
-        <dw-surface elevation=6>
+        <dw-surface elevation=6 interactive>
           <div class="square">6dp</div>
         </dw-surface>
 
@@ -150,19 +151,19 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">0dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1 bg="primary" interactive title="1dp" tabindex=0>
+        <dw-surface elevation=1 bg="primary" interactive title="1dp">
           <div class="square">1dp</div>
         </dw-surface>
 
-        <dw-surface elevation=2 bg="primary">
+        <dw-surface elevation=2 bg="primary" disabled>
           <div class="square">2dp</div>
         </dw-surface>
 
-        <dw-surface elevation=3 bg="primary">
+        <dw-surface elevation=3 bg="primary" activated>
           <div class="square">3dp</div>
         </dw-surface>
 
-        <dw-surface elevation=4 bg="primary">
+        <dw-surface elevation=4 bg="primary" selected>
           <div class="square">4dp</div>
         </dw-surface>
 
@@ -194,19 +195,19 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">0dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1 bg="secondary" interactive title="1dp" tabindex=0>
+        <dw-surface elevation=1 bg="secondary" interactive title="1dp" >
           <div class="square">1dp</div>
         </dw-surface>
 
-        <dw-surface elevation=2 bg="secondary">
+        <dw-surface elevation=2 bg="secondary" disabled>
           <div class="square">2dp</div>
         </dw-surface>
 
-        <dw-surface elevation=3 bg="secondary">
+        <dw-surface elevation=3 bg="secondary" activated>
           <div class="square">3dp</div>
         </dw-surface>
 
-        <dw-surface elevation=4 bg="secondary">
+        <dw-surface elevation=4 bg="secondary" interactive selected>
           <div class="square">4dp</div>
         </dw-surface>
 
@@ -237,19 +238,19 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">0dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1 bg="error" interactive title="1dp" tabindex=0>
+        <dw-surface elevation=1 bg="error" interactive title="1dp" >
           <div class="square">1dp</div>
         </dw-surface>
 
-        <dw-surface elevation=2 bg="error">
+        <dw-surface elevation=2 bg="error" disabled>
           <div class="square">2dp</div>
         </dw-surface>
 
-        <dw-surface elevation=3 bg="error">
+        <dw-surface elevation=3 bg="error" activated>
           <div class="square">3dp</div>
         </dw-surface>
 
-        <dw-surface elevation=4 bg="error">
+        <dw-surface elevation=4 bg="error" selected>
           <div class="square">4dp</div>
         </dw-surface>
 
@@ -279,30 +280,30 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">0dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1 transparent interactive title="1dp" tabindex=0>
+        <dw-surface elevation=1 transparent interactive title="1dp">
           <div class="square">1dp</div>
         </dw-surface>
       </div>
 
       <div class="layout wrapper bg-surface">
         <div>Without box-shadow </div>
-        <dw-surface elevation=0 no-box-shadow>
+        <dw-surface elevation=0 no-box-shadow >
           <div class="square">0dp</div>
         </dw-surface>
 
-        <dw-surface elevation=1 no-box-shadow interactive title="1dp" tabindex=0>
+        <dw-surface elevation=1 no-box-shadow interactive title="1dp">
           <div class="square">1dp</div>
         </dw-surface>
 
-        <dw-surface elevation=2 no-box-shadow>
+        <dw-surface elevation=2 no-box-shadow disabled>
           <div class="square">2dp</div>
         </dw-surface>
 
-        <dw-surface elevation=3 no-box-shadow>
+        <dw-surface elevation=3 no-box-shadow interactive activated>
           <div class="square">3dp</div>
         </dw-surface>
 
-        <dw-surface elevation=4 no-box-shadow>
+        <dw-surface elevation=4 no-box-shadow selected>
           <div class="square">4dp</div>
         </dw-surface>
 
