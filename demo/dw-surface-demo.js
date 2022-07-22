@@ -276,17 +276,6 @@ class DwSurfaceDemo extends LitElement {
         </dw-surface>
       </div>
 
-      <div class="layout wrapper bg-surface blue">
-        <div>Transparent background for 0 elevation </div>
-        <dw-surface elevation=0 transparent>
-          <div class="square">0dp</div>
-        </dw-surface>
-
-        <dw-surface elevation=1 transparent>
-          <div class="square">1dp</div>
-        </dw-surface>
-      </div>
-
       <div class="layout wrapper bg-surface">
         <div>Without box-shadow </div>
         <dw-surface elevation=0 no-box-shadow >
@@ -330,6 +319,17 @@ class DwSurfaceDemo extends LitElement {
         </dw-surface>
       </div>
 
+      <div class="layout wrapper bg-surface blue">
+        <div>Transparent background for 0 elevation </div>
+        <dw-surface elevation=0 transparent>
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 transparent>
+          <div class="square">1dp</div>
+        </dw-surface>
+      </div>
+      
       <div class="layout wrapper bg-surface">
         <div>Interactive surface (focus and hover)</div>
         <dw-surface elevation=0 interactive tabindex="0">

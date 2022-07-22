@@ -140,7 +140,8 @@ export class DwSurface extends LitElement {
         }
         /* STARTS: overlay styles for dark theme based on evevation */
 
-        .overlay{
+        .overlay,
+        .overlay1{
           background-color: var(--dw-surface-overlay-color);
           opacity: 0;
           pointer-events: none;
@@ -232,6 +233,7 @@ export class DwSurface extends LitElement {
     return html`
       ${this.interactive ? html`<dw-ripple></dw-ripple>` : html``}
       <div class="overlay fit"></div>
+      <div class="overlay1 fit"></div>
       <!-- <div class="fit"> -->
         <section class="scroller">
           ${this._getContentTemplate}
