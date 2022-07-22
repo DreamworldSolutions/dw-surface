@@ -11,7 +11,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 /**
  * ## Behavior
  *  - When hover, focus, and ripple are to be enabled, set interactive=true.
- *  - When disabled=true, hover, focus, and ripple effects are disabled, though interactive is true.
  *  - When selected = true, a selected overlay is shown in primary color.
  *  - When activated=true, an activated overlay is shown in the primary color.
  * 
@@ -211,29 +210,10 @@ export class DwSurface extends LitElement {
       },
 
       /**
-       * Input property.
-       * Set to true to disable surface.
-       */
-      disabled: {
-        type: Boolean,
-        reflect: true
-      },
-
-      /**
        * Input property
        * Set to true to show surface selected.
        */
       selected: {
-        type: Boolean,
-        reflect: true
-      },
-
-      /**
-       * Input property
-       * Set true to disable just hover effect. 
-       * Needed on a touch enabled device.
-       */
-      disableHover: {
         type: Boolean,
         reflect: true
       },
