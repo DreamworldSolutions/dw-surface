@@ -31,10 +31,10 @@
     "@material/mwc-ripple" "^0.26.1"
     lit-element "^2.2.0"
 
-"@dreamworld/material-styles@^2.4.0-development.3":
-  version "2.4.0-development.3"
-  resolved "https://registry.yarnpkg.com/@dreamworld/material-styles/-/material-styles-2.4.0-development.3.tgz#af15b4fb3f824bc656fa1804d845c94292cdd1b7"
-  integrity sha512-lcOqPKgAXp4aw+0Gk4KzFUBRCSWN8ADZtB0JALx63Bf30I3O2006Gydy/rI5tsA2qIZ7sLiSi0vbUI9SQ+cQZQ==
+"@dreamworld/material-styles@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@dreamworld/material-styles/-/material-styles-2.4.0.tgz#0bbb12f6a5512f0a78577ff93b2a5916031040ee"
+  integrity sha512-D3iq06rPfJyjiSvvFkXQygORIguXmumSObB1x5gGaXVcq8o9DqvG3RAxbAR2WwubKFDYAQmu5WoQECgi5NbUmA==
   dependencies:
     lit-element "^2.2.0"
 
