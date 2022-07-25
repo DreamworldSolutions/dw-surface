@@ -22,6 +22,8 @@ class DwSurfaceDemo extends LitElement {
       css`
         :host{
           display: inline-block;
+          background: var(--mdc-theme-surface);
+          padding: 24px;
         }
 
         .layout{
@@ -57,7 +59,7 @@ class DwSurfaceDemo extends LitElement {
         mwc-formfield{
           display: block;
           padding-bottom: 24px;
-          background: #fff;
+          background: var(--mdc-theme-surface);
         }
 
         .bg-error{
@@ -111,7 +113,7 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">1dp</div>
         </dw-surface>
 
-        <dw-surface elevation=2>
+        <dw-surface elevation=1>
           <div class="square">2dp</div>
         </dw-surface>
 
@@ -274,19 +276,9 @@ class DwSurfaceDemo extends LitElement {
         </dw-surface>
       </div>
 
-      <div class="layout wrapper bg-surface blue">
-        <dw-surface elevation=0 transparent>
-          <div class="square">0dp</div>
-        </dw-surface>
-
-        <dw-surface elevation=1 transparent>
-          <div class="square">1dp</div>
-        </dw-surface>
-      </div>
-
       <div class="layout wrapper bg-surface">
         <div>Without box-shadow </div>
-        <dw-surface elevation=0 no-box-shadow>
+        <dw-surface elevation=0 no-box-shadow >
           <div class="square">0dp</div>
         </dw-surface>
 
@@ -324,6 +316,245 @@ class DwSurfaceDemo extends LitElement {
 
         <dw-surface elevation=24 no-box-shadow>
           <div class="square">24dp</div>
+        </dw-surface>
+      </div>
+
+      <div class="layout wrapper bg-surface blue">
+        <div>Transparent background for 0 elevation </div>
+        <dw-surface elevation=0 transparent>
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 transparent>
+          <div class="square">1dp</div>
+        </dw-surface>
+      </div>
+      
+      <div class="layout wrapper bg-surface">
+        <div>Interactive surface (focus and hover)</div>
+        <dw-surface elevation=0 interactive tabindex="0">
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 interactive tabindex="0">
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 interactive tabindex="0">
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 interactive tabindex="0">
+          <div class="square">3dp</div>
+        </dw-surface>
+      </div>
+
+      <div class="layout wrapper bg-surface">
+        <div>Interactive surface (focus and hover) in primary </div>
+        <dw-surface elevation=0 bg="primary" interactive tabindex="0" >
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 bg="primary" interactive tabindex="0">
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 bg="primary" interactive tabindex="0">
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 bg="primary" interactive tabindex="0">
+          <div class="square">3dp</div>
+        </dw-surface>
+      </div>
+
+      <div class="layout wrapper bg-surface">
+        <div>Interactive surface (focus and hover) in secondary </div>
+        <dw-surface elevation=0 bg="secondary" interactive tabindex="0">
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 bg="secondary" interactive tabindex="0">
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 bg="secondary" interactive tabindex="0">
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 bg="secondary" interactive tabindex="0">
+          <div class="square">3dp</div>
+        </dw-surface>
+      </div>
+
+      <div class="layout wrapper bg-surface">
+        <div>Interactive surface (focus and hover) in errorr</div>
+        <dw-surface elevation=0 bg="error" interactive tabindex="0">
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 bg="error" interactive tabindex="0">
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 bg="error" interactive tabindex="0">
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 bg="error" interactive tabindex="0">
+          <div class="square">3dp</div>
+        </dw-surface>
+      </div>
+
+      <div class="layout wrapper bg-surface">
+        <div>Selected selected state</div>
+        <dw-surface elevation=0 selected>
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 selected>
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 selected>
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 selected>
+          <div class="square">3dp</div>
+        </dw-surface>
+      </div>
+
+      <div class="layout wrapper bg-surface">
+        <div>Selected selected state in primary </div>
+        <dw-surface elevation=0 bg="primary" selected>
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 bg="primary" selected>
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 bg="primary" selected>
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 bg="primary" selected>
+          <div class="square">3dp</div>
+        </dw-surface>
+      </div>
+
+      <div class="layout wrapper bg-surface">
+        <div>Selected surface state in secondary </div>
+        <dw-surface elevation=0 bg="secondary" selected>
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 bg="secondary" selected>
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 bg="secondary" selected>
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 bg="secondary" selected>
+          <div class="square">3dp</div>
+        </dw-surface>
+      </div>
+      
+      <div class="layout wrapper bg-surface">
+        <div>Selected surface state in errorr</div>
+        <dw-surface elevation=0 bg="error" selected>
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 bg="error" selected>
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 bg="error" selected>
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 bg="error" selected>
+          <div class="square">3dp</div>
+        </dw-surface>
+      </div>
+
+      <div class="layout wrapper bg-surface">
+        <div>Activated selected state</div>
+        <dw-surface elevation=0 activated>
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 activated>
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 activated>
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 activated>
+          <div class="square">3dp</div>
+        </dw-surface>
+      </div>
+
+      <div class="layout wrapper bg-surface">
+        <div>Activated selected state in primary </div>
+        <dw-surface elevation=0 bg="primary" activated>
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 bg="primary" activated>
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 bg="primary" activated>
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 bg="primary" activated>
+          <div class="square">3dp</div>
+        </dw-surface>
+      </div>
+
+      <div class="layout wrapper bg-surface">
+        <div>Activated surface state in secondary </div>
+        <dw-surface elevation=0 bg="secondary" activated>
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 bg="secondary" activated>
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 bg="secondary" activated>
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 bg="secondary" activated>
+          <div class="square">3dp</div>
+        </dw-surface>
+      </div>
+      
+      <div class="layout wrapper bg-surface">
+        <div>Activated surface state in errorr</div>
+        <dw-surface elevation=0 bg="error" activated>
+          <div class="square">0dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=1 bg="error" activated>
+          <div class="square">1dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=2 bg="error" activated>
+          <div class="square">2dp</div>
+        </dw-surface>
+
+        <dw-surface elevation=3 bg="error" activated>
+          <div class="square">3dp</div>
         </dw-surface>
       </div>
     `;
