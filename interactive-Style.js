@@ -2,10 +2,6 @@ import { css } from 'lit-element';
 
 export const interactiveStyle = css`
 
-  :host([interactive]) .overlay1 {
-    pointer-events: auto;
-  }
-
   @media (hover: hover) {
     /* STARTS: overlay styles for hover state */
     :host([interactive]:hover) .overlay1 {

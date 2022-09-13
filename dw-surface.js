@@ -147,10 +147,6 @@ export class DwSurface extends LitElement {
           pointer-events: none;
         }
 
-        .overlay1 {
-          z-index: -1;
-        }
-
         .fit{
           position: absolute;
           top: 0;
