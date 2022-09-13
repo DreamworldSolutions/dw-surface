@@ -14,6 +14,7 @@ import '../dw-surface.js';
 import { ThemeStyle } from '@dreamworld/material-styles/theme';
 import '@material/mwc-switch';
 import '@material/mwc-formfield';
+import './extended-surface-demo.js';
 
 class DwSurfaceDemo extends LitElement {
   static get styles() {
@@ -557,6 +558,8 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">3dp</div>
         </dw-surface>
       </div>
+
+      <extended-surface-demo elevation="4" interactive tabindex="0"></extended-surface-demo>
     `;
   }
 

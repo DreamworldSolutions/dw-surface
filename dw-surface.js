@@ -147,6 +147,10 @@ export class DwSurface extends LitElement {
           pointer-events: none;
         }
 
+        .overlay1 {
+          z-index: -1;
+        }
+
         .fit{
           position: absolute;
           top: 0;
@@ -233,12 +237,12 @@ export class DwSurface extends LitElement {
     return html`
       ${this.interactive ? html`<dw-ripple></dw-ripple>` : html``}
       <div class="overlay fit"></div>
-      <div class="overlay1 fit"></div>
       <!-- <div class="fit"> -->
         <section class="scroller">
           ${this._getContentTemplate}
         </section>
       <!-- </div> -->
+      <div class="overlay1 fit"></div>
     `;
   }
 
