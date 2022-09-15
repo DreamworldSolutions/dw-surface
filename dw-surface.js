@@ -232,7 +232,7 @@ export class DwSurface extends LitElement {
 
   render() {
     return html`
-      ${this.interactive ? html`<dw-ripple enableHover></dw-ripple>` : html``}
+      ${this.interactive ? html`<dw-ripple></dw-ripple>` : html``}
       <div class="overlay fit"></div>
       <!-- <div class="fit"> -->
       <section class="scroller">${this._getContentTemplate}</section>
