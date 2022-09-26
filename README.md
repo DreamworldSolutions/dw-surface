@@ -1,18 +1,25 @@
 # dw-surface
 
 ## Usage
+
 There are 2 different ways to use it:
+
 1. Extend `DWSurface` and specify `_contentTemplate()`. (Most used case)
 2. Use `dw-surface` in local dom of any other element & provide it's content as light dom (`slot`). (Rare used case)
 
 ## properties
-- `bg`. In which color background should be rendered. 
-Possible values: `primary`, `secondary`, `error` and `surface`. Default value is `surface`.
-- `elevation` (Number). Default value `0`. drop-shadow changes based on this. 
-In dark-theme opacity of the background is changed on different elevation. Those can be configured through custom css
-properties.
+
+| Name          | Type      | Default   | Description                                                                                                                                                                    |
+| ------------- | --------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `bg`          | `String`  | `surface` | In which color background should be rendered. Possible values: `primary`, `secondary`, `error` and `surface`.                                                                  |
+| `elevation`   | `Number`  | `0`       | Drop-shadow changes based on this. In the dark-theme, the opacity of the background is changed on different elevations. Those can be configured through custom CSS properties. |
+| `transparent` | `Boolean` | `false`   | For a transparent background, set `true` elevation to `0`.                                                                                                                     |
+| `interactive` | `Boolean` | `false`   | Set `true` to enable `hover`, `focus` and `ripple` effects.                                                                                                                    |
+| `selected`    | `Boolean` | `false`   | Set to `true` to show the surface selected.                                                                                                                                    |
+| `activated`   | `Boolean` | `false`   | Set to `true` to display the surface in an activated state.                                                                                                                    |
 
 ## Custom CSS Properties
+
 - `--dw-surface-overlay-color`
 - `--dw-surface-overlay-opacitiy-elevation-1`
 - `--dw-surface-overlay-opacitiy-elevation-2`
@@ -24,7 +31,6 @@ properties.
 - `--dw-surface-overlay-opacitiy-elevation-16`
 - `--dw-surface-overlay-opacitiy-elevation-24`
 
-> It's already been declrared with default values of material style in 
-> [`material-styles`](https://github.com/DreamworldSolutions/material-styles). 
-> So, In most cases you don't need to customize them unless you really intended to do so. 
-
+> It's already been declrared with default values of material style in
+> [`material-styles`](https://github.com/DreamworldSolutions/material-styles).
+> So, In most cases you don't need to customize them unless you really intended to do so.

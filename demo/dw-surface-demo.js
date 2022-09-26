@@ -14,6 +14,7 @@ import '../dw-surface.js';
 import { ThemeStyle } from '@dreamworld/material-styles/theme';
 import '@material/mwc-switch';
 import '@material/mwc-formfield';
+import './extended-surface-demo.js';
 
 class DwSurfaceDemo extends LitElement {
   static get styles() {
@@ -407,7 +408,7 @@ class DwSurfaceDemo extends LitElement {
       </div>
 
       <div class="layout wrapper bg-surface">
-        <div>Selected selected state</div>
+        <div>Selected state (regular surface)</div>
         <dw-surface elevation=0 selected>
           <div class="square">0dp</div>
         </dw-surface>
@@ -426,7 +427,7 @@ class DwSurfaceDemo extends LitElement {
       </div>
 
       <div class="layout wrapper bg-surface">
-        <div>Selected selected state in primary </div>
+        <div>Selected state in primary </div>
         <dw-surface elevation=0 bg="primary" selected>
           <div class="square">0dp</div>
         </dw-surface>
@@ -445,7 +446,7 @@ class DwSurfaceDemo extends LitElement {
       </div>
 
       <div class="layout wrapper bg-surface">
-        <div>Selected surface state in secondary </div>
+        <div>Selected state in secondary </div>
         <dw-surface elevation=0 bg="secondary" selected>
           <div class="square">0dp</div>
         </dw-surface>
@@ -464,7 +465,7 @@ class DwSurfaceDemo extends LitElement {
       </div>
       
       <div class="layout wrapper bg-surface">
-        <div>Selected surface state in errorr</div>
+        <div>Selected state in errorr</div>
         <dw-surface elevation=0 bg="error" selected>
           <div class="square">0dp</div>
         </dw-surface>
@@ -483,7 +484,7 @@ class DwSurfaceDemo extends LitElement {
       </div>
 
       <div class="layout wrapper bg-surface">
-        <div>Activated selected state</div>
+        <div>Activated state (regular surface)</div>
         <dw-surface elevation=0 activated>
           <div class="square">0dp</div>
         </dw-surface>
@@ -502,7 +503,7 @@ class DwSurfaceDemo extends LitElement {
       </div>
 
       <div class="layout wrapper bg-surface">
-        <div>Activated selected state in primary </div>
+        <div>Activated state in primary </div>
         <dw-surface elevation=0 bg="primary" activated>
           <div class="square">0dp</div>
         </dw-surface>
@@ -521,7 +522,7 @@ class DwSurfaceDemo extends LitElement {
       </div>
 
       <div class="layout wrapper bg-surface">
-        <div>Activated surface state in secondary </div>
+        <div>Activated state in secondary </div>
         <dw-surface elevation=0 bg="secondary" activated>
           <div class="square">0dp</div>
         </dw-surface>
@@ -540,7 +541,7 @@ class DwSurfaceDemo extends LitElement {
       </div>
       
       <div class="layout wrapper bg-surface">
-        <div>Activated surface state in errorr</div>
+        <div>Activated state in errorr</div>
         <dw-surface elevation=0 bg="error" activated>
           <div class="square">0dp</div>
         </dw-surface>
@@ -557,6 +558,8 @@ class DwSurfaceDemo extends LitElement {
           <div class="square">3dp</div>
         </dw-surface>
       </div>
+
+      <extended-surface-demo class="bg-surface" elevation="4" interactive tabindex="0"></extended-surface-demo>
     `;
   }
 
