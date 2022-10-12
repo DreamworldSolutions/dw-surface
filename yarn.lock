@@ -23,10 +23,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@dreamworld/dw-ripple@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@dreamworld/dw-ripple/-/dw-ripple-2.3.0.tgz#2f995f604dbfec5dcd3998b9bc4e83dd4fb33491"
-  integrity sha512-qU35HmCv44GfDUuKhrYbP/mucZ7dP0gq4LDw+j1UuhZbC4+Z6cnR247pyujfCCFnwiYB1QpuM6rRRp/Sd83WWw==
+"@dreamworld/dw-ripple@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@dreamworld/dw-ripple/-/dw-ripple-2.4.0.tgz#c600ce01399846b1568833292c110b76af5c894a"
+  integrity sha512-gy55YCWurBQssA2KNDFFbXkiB661tIYuMkPVLccNDtiL+vKbJ54qvci14lLX43vKlm0ORm4lrCqzCE0zG/GkNQ==
   dependencies:
     "@material/mwc-ripple" "^0.26.1"
     lit-element "^2.2.0"
