@@ -1,14 +1,4 @@
 /**
-@license
-Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-*/
-
-/**
  * ## Behavior
  *  - When hover, focus, and ripple are to be enabled, set interactive=true.
  *  - When selected = true, a selected overlay is shown in primary color.
@@ -19,11 +9,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
  *  - The hover effect is visible even when focused or selected.
  */
 
-import { html, css } from "lit-element";
-import { LitElement } from "@dreamworld/pwa-helpers/lit-element.js";
-import { Shadow } from "@dreamworld/material-styles/shadow";
-import { interactiveStyle } from "./interactive-Style.js";
-import "@dreamworld/dw-ripple";
+import { LitElement, html, css } from '@dreamworld/pwa-helpers/lit.js';
+import { Shadow } from '@dreamworld/material-styles/shadow';
+import { interactiveStyle } from './interactive-Style.js';
+import '@dreamworld/dw-ripple';
 
 export class DwSurface extends LitElement {
   static get styles() {
