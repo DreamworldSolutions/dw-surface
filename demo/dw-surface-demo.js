@@ -553,4 +553,4 @@ class DwSurfaceDemo extends LitElement {
 
 }
 
-window.customElements.define('dw-surface-demo', DwSurfaceDemo);
+customElements.define('dw-surface-demo', DwSurfaceDemo);

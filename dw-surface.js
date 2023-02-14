@@ -241,4 +241,4 @@ export class DwSurface extends LitElement {
   }
 }
 
-window.customElements.define("dw-surface", DwSurface);
+customElements.define("dw-surface", DwSurface);
