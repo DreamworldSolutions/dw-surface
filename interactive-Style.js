@@ -57,7 +57,7 @@ export const interactiveStyle = css`
     }
 
     /* STARTS: overlay styles for selected with hover state */
-    :host([selected]:hover) .overlay1 {
+    :host([interactive][selected]:hover) .overlay1 {
       background-color: var(--mdc-theme-primary);
       opacity: calc(
         var(--mdc-theme-on-surface-overlay-opacity-selected, 0.08) +
@@ -65,7 +65,7 @@ export const interactiveStyle = css`
       );
     }
 
-    :host([selected][bg="primary"]:hover) .overlay1 {
+    :host([interactive][selected][bg="primary"]:hover) .overlay1 {
       background-color: var(--mdc-theme-on-primary);
       opacity: calc(
         var(--mdc-theme-on-primary-overlay-opacity-selected, 0.16) +
@@ -73,7 +73,7 @@ export const interactiveStyle = css`
       );
     }
 
-    :host([selected][bg="secondary"]:hover) .overlay1 {
+    :host([interactive][selected][bg="secondary"]:hover) .overlay1 {
       background-color: var(--mdc-theme-on-secondary);
       opacity: calc(
         var(--mdc-theme-on-secondary-overlay-opacity-selected, 0.16) +
@@ -81,7 +81,7 @@ export const interactiveStyle = css`
       );
     }
 
-    :host([selected][bg="error"]:hover) .overlay1 {
+    :host([interactive][selected][bg="error"]:hover) .overlay1 {
       background-color: var(--mdc-theme-on-error);
       opacity: calc(
         var(--mdc-theme-on-error-overlay-opacity-selected, 0.16) +
