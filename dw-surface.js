@@ -9,10 +9,10 @@
  *  - The hover effect is visible even when focused or selected.
  */
 
-import { LitElement, html, css } from '@dreamworld/pwa-helpers/lit.js';
-import { Shadow } from '@dreamworld/material-styles/shadow';
-import { interactiveStyle } from './interactive-Style.js';
-import '@dreamworld/dw-ripple';
+import { LitElement, html, css } from "@dreamworld/pwa-helpers/lit.js";
+import { Shadow } from "@dreamworld/material-styles/shadow";
+import { interactiveStyle } from "./interactive-Style.js";
+import "@dreamworld/dw-ripple";
 
 export class DwSurface extends LitElement {
   static get styles() {
@@ -156,6 +156,10 @@ export class DwSurface extends LitElement {
 
         :host([elevation="0"][transparent]) {
           background-color: transparent;
+        }
+
+        dw-ripple {
+          z-index: var(--dw-surface-ripple-z-index);
         }
       `,
     ];
