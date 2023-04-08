@@ -2,12 +2,12 @@
   "name": "@dreamworld/dw-surface",
   "version": "0.0.0-development",
   "description": "",
-  "main": "dw-surface.ts",
+  "main": "dw-surface.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "wds",
-    "build": "tsc"
+    "build": "tsc && rm -rf src/ && rm -rf demo/"
   },
   "repository": {
     "type": "git",
