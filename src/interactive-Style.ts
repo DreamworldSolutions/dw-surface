@@ -1,4 +1,4 @@
-import { css } from '@dreamworld/pwa-helpers/lit.js';
+import { css } from "lit";
 
 export const interactiveStyle = css`
   @media (hover: hover) {
