@@ -1,5 +1,5 @@
 import { LitElement, html, css } from '@dreamworld/pwa-helpers/lit.js';
-import '../dw-surface.js';
+import '../src/dw-surface';
 import { ThemeStyle } from '@dreamworld/material-styles/theme';
 import '@material/mwc-switch';
 import '@material/mwc-formfield';

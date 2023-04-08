@@ -1,5 +1,5 @@
 import { html, css } from "lit-element";
-import { DwSurface } from "../dw-surface";
+import { DwSurface } from "../src/dw-surface";
 import { ThemeStyle } from "@dreamworld/material-styles/theme";
 
 export class extendedSurfaceDemo extends DwSurface {
