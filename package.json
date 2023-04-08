@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "wds",
-    "build": "tsc && rm -rf src/ && rm -rf demo/ && rm -rf web-dev-server.config.mjs && rm -rf tsconfig.json"
+    "build": "tsc && rm -rf src/ && rm -rf demo/"
   },
   "repository": {
     "type": "git",
