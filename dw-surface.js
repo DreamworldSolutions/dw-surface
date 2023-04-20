@@ -9,10 +9,10 @@
  *  - The hover effect is visible even when focused or selected.
  */
 
-import { LitElement, html, css } from "@dreamworld/pwa-helpers/lit.js";
-import { Shadow } from "@dreamworld/material-styles/shadow";
-import { interactiveStyle } from "./interactive-Style.js";
 import "@dreamworld/dw-ripple";
+import { Shadow } from "@dreamworld/material-styles/shadow";
+import { LitElement, css, html } from "@dreamworld/pwa-helpers/lit.js";
+import { interactiveStyle } from "./interactive-Style.js";
 
 export class DwSurface extends LitElement {
   static get styles() {
@@ -219,6 +219,11 @@ export class DwSurface extends LitElement {
         type: Boolean,
         reflect: true,
       },
+
+      /**
+       * whether to apply a focus effect on the button or not.
+       */
+      _noFocusEffect: { type: Boolean, reflect: true, attribute: "no-focus-effect" },
     };
   }
 
@@ -238,6 +243,26 @@ export class DwSurface extends LitElement {
     this.bg = "surface";
     this.elevation = 0;
     this.noBoxShadow = false;
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.addEventListener("mousedown", this._onMouseDown);
+    this.addEventListener("blur", this._onBlur);
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    this.removeEventListener("mousedown", this._onMouseDown);
+    this.removeEventListener("blur", this._onBlur);
+  }
+
+  _onMouseDown(e) {
+    this._noFocusEffect = true;
+  }
+
+  _onBlur() {
+    this._noFocusEffect = false;
   }
 
   get _getContentTemplate() {
