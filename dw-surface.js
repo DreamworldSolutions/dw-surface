@@ -27,7 +27,6 @@ export class DwSurface extends LitElement {
           background-color: var(--mdc-theme-surface, #fff);
           box-sizing: border-box;
           position: relative;
-          overflow: hidden;
         }
 
         :host[hidden] {
@@ -92,39 +91,39 @@ export class DwSurface extends LitElement {
 
         /* STARTS: overlay styles for dark theme based on evevation */
         :host([elevation="1"]) .overlay {
-          opacity: var(--dw-surface-overlay-opacitiy-elevation-1);
+          opacity: var(--dw-surface-overlay-opacitiy-elevation-1, 0);
         }
 
         :host([elevation="2"]) .overlay {
-          opacity: var(--dw-surface-overlay-opacitiy-elevation-2);
+          opacity: var(--dw-surface-overlay-opacitiy-elevation-2, 0);
         }
 
         :host([elevation="3"]) .overlay {
-          opacity: var(--dw-surface-overlay-opacitiy-elevation-3);
+          opacity: var(--dw-surface-overlay-opacitiy-elevation-3, 1);
         }
 
         :host([elevation="4"]) .overlay {
-          opacity: var(--dw-surface-overlay-opacitiy-elevation-4);
+          opacity: var(--dw-surface-overlay-opacitiy-elevation-4, 0);
         }
 
         :host([elevation="6"]) .overlay {
-          opacity: var(--dw-surface-overlay-opacitiy-elevation-6);
+          opacity: var(--dw-surface-overlay-opacitiy-elevation-6, 0);
         }
 
         :host([elevation="8"]) .overlay {
-          opacity: var(--dw-surface-overlay-opacitiy-elevation-8);
+          opacity: var(--dw-surface-overlay-opacitiy-elevation-8, 0);
         }
 
         :host([elevation="12"]) .overlay {
-          opacity: var(--dw-surface-overlay-opacitiy-elevation-12);
+          opacity: var(--dw-surface-overlay-opacitiy-elevation-12, 0);
         }
 
         :host([elevation="16"]) .overlay {
-          opacity: var(--dw-surface-overlay-opacitiy-elevation-16);
+          opacity: var(--dw-surface-overlay-opacitiy-elevation-16, 0);
         }
 
         :host([elevation="24"]) .overlay {
-          opacity: var(--dw-surface-overlay-opacitiy-elevation-24);
+          opacity: var(--dw-surface-overlay-opacitiy-elevation-24, 0);
         }
         /* STARTS: overlay styles for dark theme based on evevation */
 
@@ -135,23 +134,24 @@ export class DwSurface extends LitElement {
           pointer-events: none;
         }
 
+        .overlay {
+          background-color: yellow;
+          opacity: 1;
+        }
+
         .fit {
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
-        }
+        } 
 
         .scroller {
-          display: inherit;
-          flex: inherit;
-          flex-direction: inherit;
-          overflow: auto;
-        }
-
-        ::slotted(*) {
-          z-index: 1;
+          display: inherit; 
+          height: inherit; /** It's computed runtime, based on the host element's height */
+          overflow: inherit;
+          position: relative; /** If we don't set, .overlay is shown on top of the scroller content. */
         }
 
         :host([elevation="0"][transparent]) {
@@ -230,11 +230,14 @@ export class DwSurface extends LitElement {
   render() {
     return html`
       ${this.interactive ? html`<dw-ripple disableHover></dw-ripple>` : html``}
-      <div class="overlay fit"></div>
+      
+      <div class="overlay fit"></div>  
+
       <!-- <div class="fit"> -->
       <section class="scroller">${this._getContentTemplate}</section>
       <!-- </div> -->
-      <div class="overlay1 fit"></div>
+      
+       <div class="overlay1 fit"></div>
     `;
   }
 
