@@ -6,6 +6,7 @@ There are 2 different ways to use it:
 
 1. Extend `DWSurface` and specify `_contentTemplate()`. (Most used case)
 2. Use `dw-surface` in local dom of any other element & provide it's content as light dom (`slot`). (Rare used case)
+3. For scroll set `max-height` or `height` and `overflow:auto`. 
 
 ## properties
 

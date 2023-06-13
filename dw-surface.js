@@ -14,6 +14,9 @@ import { Shadow } from "@dreamworld/material-styles/shadow";
 import { LitElement, css, html } from "@dreamworld/pwa-helpers/lit.js";
 import { interactiveStyle } from "./interactive-Style.js";
 
+// Lodash Methods
+import debounce from "lodash-es/debounce";
+
 export class DwSurface extends LitElement {
   static get styles() {
     return [
@@ -27,6 +30,7 @@ export class DwSurface extends LitElement {
           background-color: var(--mdc-theme-surface, #fff);
           box-sizing: border-box;
           position: relative;
+          overflow: hidden;
         }
 
         :host[hidden] {
@@ -134,21 +138,16 @@ export class DwSurface extends LitElement {
           pointer-events: none;
         }
 
-        .overlay {
-          background-color: yellow;
-          opacity: 1;
-        }
-
         .fit {
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
-        } 
+        }
 
         .scroller {
-          display: inherit; 
+          display: inherit;
           height: inherit; /** It's computed runtime, based on the host element's height */
           overflow: inherit;
           position: relative; /** If we don't set, .overlay is shown on top of the scroller content. */
@@ -230,14 +229,14 @@ export class DwSurface extends LitElement {
   render() {
     return html`
       ${this.interactive ? html`<dw-ripple disableHover></dw-ripple>` : html``}
-      
-      <div class="overlay fit"></div>  
+
+      <div class="overlay fit"></div>
 
       <!-- <div class="fit"> -->
       <section class="scroller">${this._getContentTemplate}</section>
       <!-- </div> -->
-      
-       <div class="overlay1 fit"></div>
+
+      ${this.interactive ? html`<div class="overlay1 fit"></div>` : ``}
     `;
   }
 
@@ -252,12 +251,32 @@ export class DwSurface extends LitElement {
     super.connectedCallback();
     this.addEventListener("mousedown", this._onMouseDown);
     this.addEventListener("blur", this._onBlur);
+    this._debounceResizeObserver = debounce(this._debounceResizeObserver.bind(this), 200);
+    this.resizeObserver = new ResizeObserver(() => this._debounceResizeObserver());
+    this.resizeObserver.observe(this);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
     this.removeEventListener("mousedown", this._onMouseDown);
     this.removeEventListener("blur", this._onBlur);
+    this.resizeObserver.unobserve(this);
+  }
+
+  _debounceResizeObserver() {
+    this._computeScrollerHeight()
+  }
+
+  _computeScrollerHeight() {
+    let scrollerEl = this.renderRoot.querySelector(".scroller");
+    let paddingTop = parseInt(window.getComputedStyle(this).getPropertyValue("padding-top"));
+    let paddingBottom = parseInt(window.getComputedStyle(this).getPropertyValue("padding-bottom"));
+
+    let scrollerElheight = scrollerEl.offsetHeight + paddingTop + paddingBottom;
+
+    if (this.offsetHeight !== scrollerElheight) {
+      scrollerEl.style.height = `${this.offsetHeight}px`;
+    }
   }
 
   _onMouseDown(e) {
