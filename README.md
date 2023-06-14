@@ -6,7 +6,8 @@ There are 2 different ways to use it:
 
 1. Extend `DWSurface` and specify `_contentTemplate()`. (Most used case)
 2. Use `dw-surface` in local dom of any other element & provide it's content as light dom (`slot`). (Rare used case)
-
+3. For Scroll, use the custom CSS property `--dw-surface-scroller-max-height` or `--dw-surface-scroller-height`.
+    - __Note:__ To enable scrolling, it is recommended to always use the custom CSS property instead of directly set `max-height` or `height` on `DWSurface`. When you need scroll and padding both at the same time than also use `--dw-surface-scroller-padding` for padding.
 ## properties
 
 | Name          | Type      | Default   | Description                                                                                                                                                                    |
@@ -30,6 +31,10 @@ There are 2 different ways to use it:
 - `--dw-surface-overlay-opacitiy-elevation-12`
 - `--dw-surface-overlay-opacitiy-elevation-16`
 - `--dw-surface-overlay-opacitiy-elevation-24`
+- `--dw-surface-ripple-z-index`
+- `--dw-surface-scroller-height`
+- `--dw-surface-scroller-max-height`
+- `--dw-surface-scroller-padding`
 
 > It's already been declrared with default values of material style in
 > [`material-styles`](https://github.com/DreamworldSolutions/material-styles).
