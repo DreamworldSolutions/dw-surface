@@ -10,12 +10,8 @@ export class extendedSurfaceDemo extends DwSurface {
         :host {
           margin: 24px;
           width: 288px;
-          --dw-surface-scroller-max-height: 
-        }
-
-        .scroller {
-          padding: 24px;
-          max-height: 300px;
+          --dw-surface-scroller-max-height: 300px;
+          --dw-surface-scroller-padding: 24px;
         }
       `,
     ];
