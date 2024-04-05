@@ -258,12 +258,16 @@ export class DwSurface extends LitElement {
     this.removeEventListener("blur", this._onBlur);
   }
 
-  _onMouseDown(e) {
-    this._noFocusEffect = true;
+  _onMouseDown() {
+    if (this.interactive) {
+      this._noFocusEffect = true;
+    }
   }
 
   _onBlur() {
-    this._noFocusEffect = false;
+    if (this.interactive) {
+      this._noFocusEffect = false;
+    }
   }
 
   get _getContentTemplate() {
