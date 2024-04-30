@@ -24,7 +24,7 @@
   "homepage": "https://github.com/DreamworldSolutions/dw-surface#readme",
   "dependencies": {
     "@dreamworld/dw-ripple": "^3.0.0",
-    "@dreamworld/material-styles": "^3.0.0",
+    "@dreamworld/material-styles": "^3.2.4",
     "@dreamworld/pwa-helpers": "^1.13.1"
   },
   "devDependencies": {
