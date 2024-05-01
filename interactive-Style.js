@@ -124,7 +124,7 @@ export const interactiveStyle = css`
   }
 
   /* STARTS: overlay styles for focus state */
-  :host(:not([activated]) :not([no-focus-effect])[interactive]:focus) .overlay1 {
+  :host(:not([activated]):not([no-focus-effect])[interactive]:focus) .overlay1 {
     background-color: var(--mdc-theme-on-surface);
     opacity: var(--mdc-theme-on-surface-overlay-opacity-focus, 0.12);
   }
