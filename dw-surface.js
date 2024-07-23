@@ -28,6 +28,7 @@ export class DwSurface extends LitElement {
           box-sizing: border-box;
           position: relative;
           overflow: hidden;
+          -webkit-tap-highlight-color: transparent;
         }
 
         :host[hidden] {
