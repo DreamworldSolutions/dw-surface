@@ -24,7 +24,7 @@ export const interactiveStyle = css`
     }
 
     /* STARTS: overlay styles for focus with hover state */
-    :host(:not([activated])[interactive]:focus:hover) .overlay1 {
+    :host(:not([activated])[interactive]:focus:hover:not(:focus-within)) .overlay1 {
       background-color: var(--mdc-theme-on-surface);
       opacity: calc(
         var(--mdc-theme-on-surface-overlay-opacity-focus, 0.12) +
@@ -32,7 +32,7 @@ export const interactiveStyle = css`
       );
     }
 
-    :host([interactive][bg="primary"]:focus:hover) .overlay1 {
+    :host([interactive][bg="primary"]:focus:hover:not(:focus-within)) .overlay1 {
       background-color: var(--mdc-theme-on-primary);
       opacity: calc(
         var(--mdc-theme-on-primary-overlay-opacity-focus, 0.24) +
@@ -40,7 +40,7 @@ export const interactiveStyle = css`
       );
     }
 
-    :host([interactive][bg="secondary"]:focus:hover) .overlay1 {
+    :host([interactive][bg="secondary"]:focus:hover:not(:focus-within)) .overlay1 {
       background-color: var(--mdc-theme-on-secondary);
       opacity: calc(
         var(--mdc-theme-on-secondary-overlay-opacity-focus, 0.24) +
@@ -48,7 +48,7 @@ export const interactiveStyle = css`
       );
     }
 
-    :host([interactive][bg="error"]:focus:hover) .overlay1 {
+    :host([interactive][bg="error"]:focus:hover:not(:focus-within)) .overlay1 {
       background-color: var(--mdc-theme-on-error);
       opacity: calc(
         var(--mdc-theme-on-error-overlay-opacity-focus, 0.24) +
@@ -124,22 +124,22 @@ export const interactiveStyle = css`
   }
 
   /* STARTS: overlay styles for focus state */
-  :host(:not([activated]):not([no-focus-effect])[interactive]:focus) .overlay1 {
+  :host(:not([activated]):not([no-focus-effect])[interactive]:focus:not(:focus-within)) .overlay1 {
     background-color: var(--mdc-theme-on-surface);
     opacity: var(--mdc-theme-on-surface-overlay-opacity-focus, 0.12);
   }
 
-  :host([interactive][bg="primary"]:focus) .overlay1 {
+  :host([interactive][bg="primary"]:focus:not(:focus-within)) .overlay1 {
     background-color: var(--mdc-theme-on-primary);
     opacity: var(--mdc-theme-on-primary-overlay-opacity-focus, 0.24);
   }
 
-  :host([interactive][bg="secondary"]:focus) .overlay1 {
+  :host([interactive][bg="secondary"]:focus:not(:focus-within)) .overlay1 {
     background-color: var(--mdc-theme-on-error);
     opacity: var(--mdc-theme-on-secondary-overlay-opacity-focus, 0.24);
   }
 
-  :host([interactive][bg="error"]:focus) .overlay1 {
+  :host([interactive][bg="error"]:focus:not(:focus-within)) .overlay1 {
     background-color: var(--mdc-theme-on-error);
     opacity: var(--mdc-theme-on-error-overlay-opacity-focus, 0.24);
   }
