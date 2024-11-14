@@ -121,6 +121,16 @@ export const interactiveStyle = css`
           var(--mdc-theme-on-error-overlay-opacity-hover, 0.08)
       );
     }
+
+    :host([selected][activated]) .overlay1 {
+      background-color: var(--mdc-theme-primary);
+      opacity: var(--mdc-theme-on-surface-overlay-opacity-activated-selected, 0.12);
+    }
+
+    :host([selected][activated]:hover) .overlay1 {
+      background-color: var(--mdc-theme-primary);
+      opacity: var(--mdc-theme-on-surface-overlay-opacity-activated-selected-hover, 0.16);
+    }
   }
 
   /* STARTS: overlay styles for focus state */
