@@ -93,7 +93,7 @@ export const interactiveStyle = css`
     :host([activated]:hover) .overlay1 {
       background-color: var(--mdc-theme-primary);
       opacity: calc(
-        var(--mdc-theme-on-surface-overlay-opacity-activated, 0.12) +
+        var(--mdc-theme-on-surface-overlay-opacity-activated, 0.08) +
           var(--mdc-theme-on-surface-overlay-opacity-hover, 0.04)
       );
     }
@@ -178,7 +178,7 @@ export const interactiveStyle = css`
 
   :host([activated]) .overlay1 {
     background-color: var(--mdc-theme-primary);
-    opacity: var(--mdc-theme-on-surface-overlay-opacity-activated, 0.12);
+    opacity: var(--mdc-theme-on-surface-overlay-opacity-activated, 0.08);
   }
 
   :host([activated][bg="primary"]) .overlay1 {
